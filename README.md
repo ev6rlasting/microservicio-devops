@@ -1,7 +1,8 @@
 # Evaluación Parcial N°2 - Ingeniería DevOps
 
 ## Integrantes
-* **Nombre:** Raul Gonzalez
+* **Nombre:** Raul Gonzalez 
+* **Nombre:** 
 * **Sección:** 003D
 
 ---
@@ -33,3 +34,6 @@ La automatización del ciclo de software mediante pipelines de CI/CD introduce g
 * **Seguridad en Automatización:** Integrar herramientas como Dependabot y análisis SAST en fases tempranas del pipeline previene que vulnerabilidades en librerías de terceros lleguen a producción.
 * **Manejo de Estados:** La orquestación correcta de dependencias en arquitecturas distribuidas es vital para evitar caídas en cascada durante despliegues automatizados.
 * **Aprendizaje:** Realizando la evaluacion he podido notar el como funciona de manera util y rapida el sistema a traves del Docker y su sencilles en el uso
+
+## IA Utilizada:
+* **Gemini:** para la realizacion de codigos y ayuda en la estructura de las Carpetas
