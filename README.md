@@ -1,37 +1,35 @@
-# EvParcial1
-Realización de la Evaluación Parcial 1
-## Estategia de ramificacion
-Tome gitflow debido a que es mas ordenado y era pedido para la evaluacion
-## Convenciones de commits
-Solo use los normales como feat para agregar las fechas y fix para corregir errores
-- feat1: agregar fecha 1
-- feat2: agregar fecha 2
-- fix: corrige la fecha
-## Naming de ramas
-- main → rama de produccion
-- develop → rama de integracion
-- feature/ nombres → para agregar funcinalidades
-- hotfix/ nombre → para correcciones
+# Evaluación Parcial N°2 - Ingeniería DevOps
 
-Para la evaluacion cree 2 de prueba que fue un feature y un hotfix de login mas que nada para comprender el como realizarlo junto a grok
+## Integrantes
+* **Nombre:** Raul Gonzalez
+* **Sección:** 003D
 
-Las otras creadas para la evaluacion fueron (creadas por mi solo)
-- Feature/fecha-1
-- Feature/fecha-2
-- Hotfix/fix-fecha
+---
 
-## Estrategias de revision
-- Siempre reviso que el pull requeste funciones
-- Chequeo que este claro y ordenado
-- Se intento mantener la calidad en el codigo
+## Arquitectura y Tecnologías
+Este proyecto consiste en un microservicio construido en Node.js orquestado junto a una base de datos MongoDB
 
-## Ejemplo practico
-- Crear features
-- Editar el README
-- Hacer commits de manera ordenada
-- Hacer push
-- Crear pull request
+* **IE1 - Contenedores:** Implementación de un `Dockerfile` optimizado utilizando Multi-stage builds para reducir el tamaño de la imagen final y mejorar la seguridad en producción.
+* **IE2 - Pruebas Automatizadas:** Cobertura de código con Jest y Supertest, integrada directamente dentro del ciclo de vida de integración continua.
+* **IE3 - Seguridad:** Uso de Dependabot para el escaneo y actualización de vulnerabilidades en dependencias NPM y Docker. Configuración de límites estrictos de CPU y memoria (`deploy.resources.limits`) en los contenedores.
+* **IE5 - Orquestación:** Archivo `docker-compose.yml` estructurado con políticas de `healthcheck` para garantizar que la base de datos MongoDB esté lista antes de inicializar el microservicio.
 
-## Uso de IA
+---
 
-Como dije anterior mente solo utilice Grok para aprender a hacer features y hotfix, aparte de eso solo para guiarme cuando no entendia el codigo que me pedian realizar.
+## Pipeline de CI/CD (GitHub Actions)
+El archivo `.github/workflows/ci-cd.yml` automatiza todo el proceso ante cada cambio en la rama principal:
+1. **Checkout:** Descarga del código fuente.
+2. **Setup:** Inicialización del entorno de Node.js.
+3. **Install:** Instalación limpia de dependencias.
+4. **Test & Coverage:** Ejecución de pruebas con generación automática de reportes de cobertura.
+5. **Security Scan:** Simulación de escaneo SAST.
+6. **Docker Build:** Compilación de la imagen del contenedor.
+
+---
+
+## Reflexión Final: Desafíos de la Entrega Continua (Exigido en IE4)
+La automatización del ciclo de software mediante pipelines de CI/CD introduce grandes beneficios, pero también desafíos técnicos críticos:
+* **Gobernanza y Consistencia:** Garantizar que los entornos de desarrollo, prueba y producción sean idénticos. El uso de Docker mitiga el clásico problema
+* **Seguridad en Automatización:** Integrar herramientas como Dependabot y análisis SAST en fases tempranas del pipeline previene que vulnerabilidades en librerías de terceros lleguen a producción.
+* **Manejo de Estados:** La orquestación correcta de dependencias en arquitecturas distribuidas es vital para evitar caídas en cascada durante despliegues automatizados.
+* **Aprendizaje:** Realizando la evaluacion he podido notar el como funciona de manera util y rapida el sistema a traves del Docker y su sencilles en el uso
