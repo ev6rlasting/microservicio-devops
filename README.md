@@ -6,7 +6,7 @@ Este documento contiene la especificación técnica, el diseño de la arquitectu
 
 ## Integrantes del Proyecto
 * **Integrante 1:** Raul Gonzalez
-* **Integrante 2:** 
+* **Integrante 2:** Génesis Montero 
 * **Sección:** 003D
 
 ---
