@@ -26,8 +26,8 @@ jobs:
     - name: Configurar Node.js
       uses: actions/setup-node@v3
       with:
-        node-size: 18
-        cache: 'npm'
+        node-version: 22
+        cache: npm
 
     - name: Instalar Dependencias
       run: npm install
