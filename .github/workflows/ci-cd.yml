@@ -13,8 +13,8 @@ on:
       - main
       - develop
 
-  jobs:
-    build-and-test:
+jobs:
+  build-and-test:
     name: Build, Test y Docker
     runs-on: ubuntu-latest
 
