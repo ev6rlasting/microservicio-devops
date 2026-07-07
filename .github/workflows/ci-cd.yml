@@ -65,8 +65,5 @@ jobs:
           echo "Snyk: OK"
           echo "0 vulnerabilidades críticas encontradas."
 
-      - name: Construir imagen Docker
-        run: docker build -t mi-microservicio-app:latest .
-
-      - name: Pipeline finalizado
-        run: echo "Pipeline ejecutado correctamente."
+    - name: Construir Imagen Docker (IE1)
+      run: docker build -t mi-microservicio-app:latest .
