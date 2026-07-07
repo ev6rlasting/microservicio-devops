@@ -77,6 +77,14 @@ jobs:
           context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/microservicio-devops:latest
+          
+      - name: Instalar kubectl
+        uses: azure/setup-kubectl@v4
+
+      - name: Validar manifiestos de Kubernetes
+        run: |
+          kubectl apply --dry-run=client -f k8s/
 
       - name: Pipeline finalizado
         run: echo "Pipeline ejecutado correctamente."
+      
