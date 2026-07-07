@@ -147,7 +147,7 @@ Se configuró además un mecanismo de **Healthcheck** para garantizar que la apl
 
 ### Evidencia
 
-*(Insertar captura de Docker Desktop mostrando ambos contenedores ejecutándose.)*
+![evidencia docker desktop](evidencias/contenedores_docker.png)
 
 ---
 
