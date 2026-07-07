@@ -1,5 +1,8 @@
 name: Pipeline CI/CD DevOps
 
+env:
+  NODE_ENV: test
+
 on:
   push:
     branches:

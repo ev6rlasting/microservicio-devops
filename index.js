@@ -44,12 +44,16 @@ app.get('/', (req, res) => {
 });
 
 // Intentar conectar a MongoDB de manera segura
-mongoose.connect(MONGO_URI)
-    .then(() => console.log('Conectado exitosamente a MongoDB'))
-    .catch(err => console.error('Error al conectar a MongoDB:', err));
+if (process.env.NODE_ENV !== "test") {
+    mongoose.connect(MONGO_URI)
+        .then(() => console.log("Conectado exitosamente a MongoDB"))
+        .catch(err => console.error(err));
+}
 
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto ${PORT}`);
-});
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Servidor corriendo en el puerto ${PORT}`);
+    });
+}
 
 module.exports = app; // Lo exportamos para los tests de más adelante
